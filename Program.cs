@@ -19,6 +19,8 @@ var newChats = (await telegram.GetAllChatsAsync())
 db.TelegramChats.AddRange(newChats.Select(chat => new TelegramChat(chat)));
 await db.SaveChangesAsync();
 
+Console.WriteLine($"Added {newChats.Count} new chats");
+
 var chats = db.TelegramChats
     .ToList()
     .Select(chat => chat.ToChat())
