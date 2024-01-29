@@ -24,6 +24,8 @@ var chats = db.TelegramChats
     .Select(chat => chat.ToChat())
     .ToArray();
 
+Console.WriteLine($"Writing to {chats.Length} chats");
+
 await telegram
     .SendAsync(
         $"Update 🎉:\n{commit}\n\nAs always we appreciate ANY comments (mostly positive thou 😜)\n@Eldrin @mparchin @ParsaRashidi",
