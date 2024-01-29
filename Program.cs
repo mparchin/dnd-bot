@@ -30,5 +30,6 @@ Console.WriteLine($"Writing to {chats.Length} chats");
 
 await telegram
     .SendAsync(
-        $"Update 🎉:\n{commit}\n\nAs always we appreciate ANY comments (mostly positive thou 😜)\n@Eldrin @mparchin @ParsaRashidi",
+        $"Update 🎉:\n{commit}\n\nGet app at: https://app.eldoriantales.com/\nAs always" +
+        $" we appreciate ANY comments (mostly positive tho 😜)\n@Eldrin @mparchin @ParsaRashidi",
         chats);
